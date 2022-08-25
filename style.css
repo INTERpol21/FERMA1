@@ -1,0 +1,273 @@
+body {
+  /*Сбросим отпуспы в 0*/
+  margin: 0;
+  height: auto;
+  -webkit-font-smoothing: antialiased;
+  background-size: contain;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.17) 0%,
+      rgba(255, 255, 255, 0.76) 32.92%,
+      rgba(255, 255, 255, 0.9) 59.51%,
+      rgba(255, 255, 255, 0.87) 103.7%
+    ),
+    url("img/back.png") center no-repeat;
+  backdrop-filter: blur(58px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+    padding: 0;
+} */
+
+/*---------------Базовые настройки закончились------------------*/
+
+/*Стилизация основного контейнера*/
+.container {
+  /*По ширине всего Контейнера*/
+  width: 100%;
+  /*Максимальная ширина контейнера 1171px + 30px padding, подготовка сразу для адаптивной верстки*/
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/*Header Стилизация шапки */
+.header {
+  /*Написано это после создания класса Intro. Блок нахдился поверх всех блоков, в данном случае для картинки бекграунда. Слой поверх всех слоев*/
+  position: absolute;
+
+  height: 100px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /*Для отображения поверх всех элементов*/
+  z-index: 1000;
+}
+
+.header__inner {
+  /*Поумолчанию стоит display:block*/
+  display: flex;
+  /*justify-content это свойство Flex,Отвечает за выравнивание элементов по главной оси:*/
+  justify-content: space-between;
+
+  /*Внутрений отсуп внутри header__inner сверху и снизу 37px*/
+  padding: 75px 0px 75px 0;
+  /*выравнивание предметов блока по гаризонтальной линии по центру */
+  align-items: center;
+}
+
+/*Intro*/
+.intro {
+  height: 750px;
+  display: flex;
+  /*Каждый новый элимент будет начинатсья с новой строки*/
+  flex-direction: column;
+  /*Выравнивание ячейки по центру блока intro */
+  justify-content: center;
+  padding-top: 130px;
+  /* height: auto;
+    padding-top: 130px;
+    padding-bottom: 30px; */
+}
+
+/*Создаем дополнительный контейнер в container для точечной регулировки расстояния*/
+.intro__inner {
+  display: flex;
+  align-items: center;
+}
+.intro__item {
+  width: 50%;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 10px;
+}
+
+.intro__title {
+  margin: 70px 0 52px 0;
+
+  /*Настройки шрифта*/
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 45px;
+  color: #1f294a;
+}
+
+.intro__subtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #1f294a;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 0 42px 0;
+  padding: 0;
+}
+
+.intro__img {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.intro__text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+  color: rgba(31, 41, 74, 0.5);
+}
+
+.intro__icon {
+  width: 50%;
+  flex-direction: column;
+}
+
+.intro__phone {
+  max-width: 100%;
+  z-index: 6;
+  position: relative;
+}
+.intro__img{
+    max-width: 100%;
+}
+
+.intro__big1 {
+  z-index: 1;
+  left: 62.22%;
+right: 10.49%;
+top: 30.96%;
+bottom: 30.57%;
+  position: absolute;
+}
+.intro__big2 {
+  z-index: 3;
+  left: 55.83%;
+right: 25.68%;
+top: 30.49%;
+bottom: 43.52%;
+  position: absolute;
+}
+.intro__big3 {
+  z-index: 2;
+  position: absolute;
+  left: 65.08%;
+right: 13.26%;
+top: 22.36%;
+bottom: 47.18%;
+}
+
+/* Footer */
+.footer {
+  padding: 170px 0 0 0;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 60px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__block {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer__icon {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+
+  color: #1f294a;
+
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer__lmg {
+  margin: 0 15px 0 0;
+}
+
+@media (max-width: 767px) {
+  .header__inner {
+    padding: 20px 0;
+  }
+
+  /* Intro */
+  .intro {
+    height: auto;
+    padding-top: 130px;
+    padding-bottom: 30px;
+    padding-top: 70px;
+  }
+
+  .intro__inner {
+    flex-wrap: wrap;
+  }
+  .intro__icon {
+    width: auto;
+  }
+
+  .intro__item {
+    width: auto;
+    margin-right: 0;
+  }
+  .footer {
+    padding: 20px 0 0 0;
+  }
+
+  .footer__icon {
+    width: auto;
+  }
+
+  .footer__title {
+    width: auto;
+    padding-bottom: 30px;
+  }
+  .footer__inner {
+    flex-direction: column;
+  }
+}
